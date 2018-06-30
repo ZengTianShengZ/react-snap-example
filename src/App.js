@@ -12,7 +12,6 @@ const loading = () => (
   <div>3232333</div>
 );
 
-
 const pageAbout = Loadable({
   loader: () => import('./pages/about'),
   loading: loading
