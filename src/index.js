@@ -1,7 +1,7 @@
 import React from 'react'
 import { hydrate, render } from 'react-dom'
-import './index.css'
 import App from './App';
+import './style/common.less';
 
 const rootElement = document.getElementById('root');
 
