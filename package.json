@@ -2,10 +2,11 @@
   "name": "react-snap-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://badsyntax.github.io/react-snap-example/",
+  "homepage": "https://ZengTianShengZ.github.io/react-snap-example/",
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-loadable": "^5.4.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"
   },

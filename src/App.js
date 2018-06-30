@@ -3,13 +3,20 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import { parse } from 'url';
 import { homepage } from '../package.json';
 // import pageAbout from './pages/about';
-import asyncComponent from './utils/asyncComponent';
-
+// import asyncComponent from './utils/asyncComponent';
+import Loadable from 'react-loadable';
 import logo from './logo.svg';
 import './App.css';
 
-const pageAbout = asyncComponent(() => import('./pages/about'))
+const loading = () => (
+  <div>3232333</div>
+);
 
+
+const pageAbout = Loadable({
+  loader: () => import('./pages/about'),
+  loading: loading
+});
 
 const basename = parse(homepage).pathname;
 

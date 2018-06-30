@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class About extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: 123333 };
+    this.state = { name: '哈哈哈哈哈----66666666' };
   }
   render() {
     return (
