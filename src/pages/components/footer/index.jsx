@@ -19,7 +19,7 @@ class Footer extends Component {
         <div className="content f-js-as-dc">
           <span>Message Us Now</span>
           <span>Available 24/7</span>
-          <span><ion-icon name="mail"></ion-icon><a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a></span>
+          <span><ion-icon name="mail"></ion-icon><a className="a-email" href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a></span>
         </div>
         <div className="content f-js-as-dc">
           <span>Address Location</span>
