@@ -1,28 +1,56 @@
-.comp-header{
+@import '~src/style/mixin.less';
+
+.app-header{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
   width: 100%;
-  height: 55px;
+  height: @header-height;
+  padding: 0 100px;
   background: #ffffff;
-  box-shadow: 0 2px 2px rgba(37, 37, 37, 0.1);
-  .content-left{
-    .logo{
-      width: 50px;
-      height: 50px;
-    }
-    .title{
-      margin-left: 20px;
-      font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  .title{
+    color: @bc;
+    font-size: 20px;
+  }
+  .link-text{
+    margin-right: 30px;
+    color: @fc3;
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    &:hover{
+      color: @bcl;
+      border-bottom: 2px solid @bcl;
     }
   }
-  .content-right{
-    cursor: pointer;
-    .user-logo{
-      width: 40px;
-      height: 40px;
-      margin-right:10px;
+  .link-act{
+    padding: 10px 0;
+    color: @bcl;
+    border-bottom: 2px solid @bcl;
+  }
+  .key-search{
+    border: 1px solid @bcl;
+    border-radius: 10px;
+    input{
+      color: @fc9;
+      display: inline-block;
+      width: 180px;
+      padding: 0 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      outline: none;
+    }
+    .icon-search{
+      background: @bcl;
+      padding: 4px 10px;
+      border-radius: 0 9px 9px 0;
+      cursor: pointer;
+    }
+    ion-icon{
+      display: block;
+      font-size: 14px;
+      color: #ffffff;
     }
   }
 }
