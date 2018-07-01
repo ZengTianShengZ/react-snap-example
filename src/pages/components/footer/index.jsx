@@ -7,21 +7,29 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import './style.less';
 
-class Header extends Component {
-  state = {
-    headerLift: 0
-  };
-  btnLoginOutClick() {
-    this.props.history.replace('/verify/login');
-  }
+class Footer extends Component {
   render() {
     return (
-      <header id="J_header_content" className="">
-        header
-      </header>
+      <footer className="app-footer f-jc-ac">
+        <div className="content f-js-as-dc">
+          <span>Company</span>
+          <span>Fujian XP Industrial Co.,LTD</span>
+          <span>Specialized on road stud since 1996</span>
+        </div>
+        <div className="content f-js-as-dc">
+          <span>Message Us Now</span>
+          <span>Available 24/7</span>
+          <span><ion-icon name="mail"></ion-icon><a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a></span>
+        </div>
+        <div className="content f-js-as-dc">
+          <span>Address Location</span>
+          <span><ion-icon name="pin"></ion-icon>2/F Bldg.6 Puda Road Jinpu Bridge Yancuo Town ,Zhangzhou 363119，Fujian Prov. China .</span>
+          <span><ion-icon name="call"></ion-icon>phone:86 15505965690</span>
+        </div>
+      </footer>
     );
   }
 }
 
 // export default withRouter(Header)
-export default withRouter(Header);
+export default withRouter(Footer);
