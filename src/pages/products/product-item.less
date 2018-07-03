@@ -1,49 +1,78 @@
 @import '~src/style/mixin.less';
 
-.app-products{
+.app-product-item{
   margin: 0 100px;
-  padding: 10px;
-
-  .top-title{
-    padding: 5px 10px 10px;
+  padding: 10px 0;
+  .product-content{
+    width: 100%;
   }
-  .ul-contnet{
+  .left-content{
     background: #ffffff;
-    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
   }
-  .li-item{
-    width: 25%;
-    padding: 40px;
-    .li-item-content{
-      height: 305px;
-      overflow: hidden;
-      border-radius: 4px;
-      &:hover{
-        .products-detail{
-          top: -100px;
-        }
+  #etalage{
+    height: 435px !important;
+  }
+  .desc-content{
+    margin-left: 20px;
+    .title{
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .desc-part{
+      margin-bottom: 10px;
+      .p-text{
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: @bc;
       }
-      .prod-img{
-        display:block;
-        width: 100%;
-        height: 250px;
-      }
-      .products-detail{
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 6px 4px;
-        background: @bcl;
-        color: #faf7f7;
-        transition: top cubic-bezier(.29,.58,.6,.91) 0.3s;
-        .title{
-          padding: 6px 4px;
+      .products-features{
+        span{
+          display: inline-block;
+          width: 120px;
           font-weight: 500;
-          height: 55px;
         }
-        .details{
-          height:155px;
-        }
+      }
+    }
+    .p-s-a{
+      margin-bottom: 10px;
+      padding: 10px  5px;
+      background: #e6e7eb;
+    }
+  }
+  .right-content{
+    width: 260px;
+    margin-left: 10px;
+    padding: 10px;
+    background: url(https://img.alicdn.com/tfs/TB1WJJjw_tYBeNjy1XdXXXXyVXa-86-106.svg) no-repeat 100% 0,linear-gradient(0deg,#fff 74%,#fff2e8);
+    .heard-content{
+      margin-bottom: 10px;
+    }
+    .heard-img{
+      width: 66px;
+      height: 66px;
+      border-radius: 100px;
+    }
+    .heard-name{
+      margin-left: 5px;
+      font-weight: 500;
+    }
+    .p-text{
+      margin-bottom: 10px;
+      span{
+        display: block;
+        color: @bcl;
+      }
+    }
+    .contect-content{
+      font-size: 30px;
+      color: #fff2e8;
+      ion-icon{
+        margin-right: 10px;
+        color: @bc;
       }
     }
   }
