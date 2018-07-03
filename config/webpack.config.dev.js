@@ -11,6 +11,8 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
+const marked = require("marked");
+const renderer = new marked.Renderer();
 const resolve = (dir) => {
   return path.join(__dirname, '..', dir)
 }
@@ -126,6 +128,13 @@ module.exports = {
           },
         ],
         include: paths.appSrc,
+      },
+      {
+        test: /\.md$/,
+        loader: [
+          'babel-loader',
+          '@hugmanrique/react-markdown-loader'
+        ]
       },
       {
         // "oneOf" will traverse all following loaders until one will

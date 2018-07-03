@@ -55,6 +55,7 @@
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "@hugmanrique/react-markdown-loader": "^0.0.2",
     "eslint": "4.10.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-standard": "^11.0.0",
@@ -64,8 +65,12 @@
     "eslint-plugin-prettier": "^2.6.1",
     "eslint-plugin-react": "7.4.0",
     "gh-pages": "1.0.0",
+    "html-loader": "^0.5.5",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "markdown-it-container": "^2.0.0",
+    "markdown-loader": "^3.0.0",
+    "react-markdown-loader": "^1.1.14",
     "react-snap": "0.8.1"
   },
   "scripts": {

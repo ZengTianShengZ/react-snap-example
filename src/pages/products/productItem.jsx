@@ -4,6 +4,9 @@
  * @update: 2018/5/23
  */
 import React, {Component} from 'react';
+import TtestMd from './components/test.md';
+import HelloWorld from './hello-world.md';
+
 import 'src/libs/etalage/etalage.css'
 import 'src/libs/etalage/jquery.etalage.min.js'
 import './product-item.less'
@@ -85,9 +88,36 @@ class Products extends Component {
             </div>
           </div>
         </div>
+        <div className="centet-content f-jb-as">
+          <div className="left-content">markdown</div>
+          <div className="centet-content-right">
+            <div>
+              {
+                recommendItem()
+              }
+            </div>
+          </div>
+        </div>
       </section>
     )
   }
+}
+
+const recommendItem = () => {
+  return (
+    <div className="">
+      <img className="product-img" src="/react-snap-example/imgHome/p1.jpg" alt="Solar Road" />
+      <div className="prd-d">
+        <p className="p-tt">Solar LED Road Stud(LD-RSD-SP)</p>
+        <div className="span-s">
+          <span>Size:Ø116*25mm</span>
+          <span>Size:Ø116*25mm</span>
+          <span>Size:Ø116*25mm</span>
+          <span>Size:Ø116*25mm</span>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Products
