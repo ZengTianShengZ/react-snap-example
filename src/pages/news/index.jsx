@@ -3,10 +3,9 @@
  * @author: zengtiansheng
  * @update: 2018/5/23
  */
-import {Link} from 'react-router-dom';
-
 import React, {Component} from 'react';
-import './style.less'
+import HelloWorld from './components/hello-world.md';
+import './style.less';
 
 class News extends Component {
   state = {
@@ -15,6 +14,7 @@ class News extends Component {
     return (
       <section className="app-news">
         news
+        <HelloWorld username={'Anonymous'} />
       </section>
     )
   }
