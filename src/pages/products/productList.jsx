@@ -4,20 +4,22 @@
  * @update: 2018/5/23
  */
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
+import {getIssuesNum} from 'src/API/index.js';
 import './product-list.less'
 
 const ProductItem = (props) => {
+  const {feature = {}, title, productId, productImgUrl} = props.item || {}
   return (
-    <li className="li-item">
+    <li className="li-item" onClick={props.itemClick.bind(null, productId)}>
       <div className="li-item-content">
-        <img className="prod-img" src="/react-snap-example/imgProducts/p1.jpg" alt="Solar Road" />
+        <img className="prod-img" src={productImgUrl} alt="Solar Road" />
         <div className="products-detail">
-          <div className="title">Solar LED Road Stud(LD-RSD-SP)</div>
+          <div className="title">{title}</div>
           <div className="details f-js-as-dc">
-            <span>Size:Ø116*25mm</span>
-            <span>Material:PC shell with epoxy filler</span>
-            <span>LED light color:white</span>
-            <span>Weight:about 0.3kg</span>
+            <span>Size:{feature.size}</span>
+            <span>color:{feature.color}</span>
+            <span>Weight:{feature.weight}</span>
           </div>
         </div>
       </div>
@@ -27,16 +29,34 @@ const ProductItem = (props) => {
 
 class ProductList extends Component {
   state = {
+    resData: {
+      list: []
+    }
+  }
+  componentDidMount() {
+    this.getData()
+  }
+  async getData() {
+    const res = await getIssuesNum('/issues/2')
+    console.log(res);
+    if (res.success) {
+      this.setState({resData: res.data})
+    }
+  }
+  onItemClick(productId) {
+    this.props.history.replace('/products/' + productId)
   }
   render() {
-    const list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const {list} = this.state.resData
     return (
       <section className="app-product-list">
-        <div className="top-title">Products/</div>
+        <div className="top-guide">
+          <Link className="top-guide-link" to="/products/">Products</Link>
+        </div>
         <ul className="ul-contnet f-js-as">
           {
             list.map((item, index) => {
-              return (<ProductItem key={index} item={item}/>)
+              return (<ProductItem key={index} item={item} itemClick={this.onItemClick.bind(this)}/>)
             })
           }
         </ul>

@@ -4,9 +4,7 @@
  * @update: 2018/5/23
  */
 import React, {Component} from 'react';
-import TtestMd from './components/test.md';
-import HelloWorld from './hello-world.md';
-
+import { Link } from 'react-router-dom';
 import 'src/libs/etalage/etalage.css'
 import 'src/libs/etalage/jquery.etalage.min.js'
 import './product-item.less'
@@ -31,6 +29,9 @@ class Products extends Component {
 
     return (
       <section className="app-product-item">
+        <div className="top-guide">
+          <Link className="top-guide-link" to="/products/">Products</Link> » xxxxxx
+        </div>
         <div className="product-content f-jb-as">
           <div className="left-content f-js-as">
             <ul id="etalage">
@@ -91,19 +92,8 @@ class Products extends Component {
           </div>
         </div>
         <div className="centet-content f-jb-as">
-          <div className="">
-            <div className="left-content">
+          <div className="left-content">
           markdown
-            </div>
-            <div className="left-content-bottom">
-              <div className="item f-jc-ac">
-                {
-                  list.map((item, index) => {
-                    return (<RecommendItem key={index} item={item}/>)
-                  })
-                }
-              </div>
-            </div>
           </div>
           <div className="centet-content-right">
             {
