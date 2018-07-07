@@ -13,6 +13,7 @@ const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const marked = require("marked");
 const renderer = new marked.Renderer();
+const highlight = require('rehype-highlight');
 const resolve = (dir) => {
   return path.join(__dirname, '..', dir)
 }
@@ -130,13 +131,6 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.md$/,
-        loader: [
-          'babel-loader',
-          '@hugmanrique/react-markdown-loader'
-        ]
-      },
-      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
@@ -144,6 +138,13 @@ module.exports = {
           // "url" loader works like "file" loader except that it embeds assets
           // smaller than specified limit in bytes as data URLs to avoid requests.
           // A missing `test` is equivalent to a match.
+          {
+            test: /\.md$/,
+            loader: [
+              'babel-loader',
+              '@hugmanrique/react-markdown-loader'
+            ]
+          },
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             loader: require.resolve('url-loader'),

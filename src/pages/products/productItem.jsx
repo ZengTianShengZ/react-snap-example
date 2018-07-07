@@ -27,6 +27,8 @@ class Products extends Component {
     });
   }
   render() {
+    const list = [1, 2, 3, 4]
+
     return (
       <section className="app-product-item">
         <div className="product-content f-jb-as">
@@ -89,13 +91,26 @@ class Products extends Component {
           </div>
         </div>
         <div className="centet-content f-jb-as">
-          <div className="left-content">markdown</div>
-          <div className="centet-content-right">
-            <div>
-              {
-                recommendItem()
-              }
+          <div className="">
+            <div className="left-content">
+          markdown
             </div>
+            <div className="left-content-bottom">
+              <div className="item f-jc-ac">
+                {
+                  list.map((item, index) => {
+                    return (<RecommendItem key={index} item={item}/>)
+                  })
+                }
+              </div>
+            </div>
+          </div>
+          <div className="centet-content-right">
+            {
+              list.map((item, index) => {
+                return (<RecommendItem key={index} item={item}/>)
+              })
+            }
           </div>
         </div>
       </section>
@@ -103,17 +118,17 @@ class Products extends Component {
   }
 }
 
-const recommendItem = () => {
+const RecommendItem = () => {
   return (
-    <div className="">
+    <div className="tj-product-item f-js-as">
       <img className="product-img" src="/react-snap-example/imgHome/p1.jpg" alt="Solar Road" />
       <div className="prd-d">
         <p className="p-tt">Solar LED Road Stud(LD-RSD-SP)</p>
         <div className="span-s">
-          <span>Size:Ø116*25mm</span>
-          <span>Size:Ø116*25mm</span>
-          <span>Size:Ø116*25mm</span>
-          <span>Size:Ø116*25mm</span>
+          <p className="ellipsis"><span>Size:</span> Ø116*25mm</p>
+          <p className="ellipsis"><span>Material:</span> PC shell with epoxy filler</p>
+          <p className="ellipsis"><span>Weight:</span> about 0.3kg</p>
+          <p className="ellipsis"><span>color:</span> white ,red ,yellow ,green,blue</p>
         </div>
       </div>
     </div>
