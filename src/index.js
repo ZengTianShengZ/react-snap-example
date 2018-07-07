@@ -2,6 +2,7 @@ import React from 'react'
 import { hydrate, render } from 'react-dom'
 import App from './App';
 import './style/common.less';
+import './style/markdown.css';
 
 const rootElement = document.getElementById('root');
 

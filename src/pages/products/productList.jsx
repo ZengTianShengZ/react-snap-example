@@ -5,7 +5,7 @@
  */
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import {getIssuesNum} from 'src/API/index.js';
+import {getProducts} from 'src/API/index.js';
 import './product-list.less'
 
 const ProductItem = (props) => {
@@ -33,11 +33,8 @@ class ProductList extends Component {
       list: []
     }
   }
-  componentDidMount() {
-    this.getData()
-  }
   async getData() {
-    const res = await getIssuesNum('/issues/2')
+    const res = await getProducts('/issues/2')
     console.log(res);
     if (res.success) {
       this.setState({resData: res.data})
@@ -45,6 +42,9 @@ class ProductList extends Component {
   }
   onItemClick(productId) {
     this.props.history.replace('/products/' + productId)
+  }
+  componentDidMount() {
+    this.getData()
   }
   render() {
     const {list} = this.state.resData
