@@ -79,74 +79,70 @@ class Home extends Component {
             <li className="li-item">
               <img src="/react-snap-example/imgHome/p1.jpg" alt="Solar Road" />
               <h3>Solar Road Stud For Road Turning</h3>
-              <p>
-                <span>Size:138*34*50mm</span>
-                <span>Material:Anti-UV PC+Aluminum</span>
-              </p>
+              <p>Size:138*34*50mm</p>
+              <p>Material:Anti-UV PC+Aluminum</p>
             </li>
             <li className="li-item">
               <img src="/react-snap-example/imgHome/p2.jpg" alt="" />
               <h3>Solar Road Stud For Road Turning</h3>
-              <p>
-                <span>Size:138*34*50mm</span>
-                <span>Material:Anti-UV PC+Aluminum</span>
-              </p>
+              <p>Size:138*34*50mm</p>
+              <p>Material:Anti-UV PC+Aluminum</p>
             </li>
             <li className="li-item">
               <img src="/react-snap-example/imgHome/p3.jpg" alt="" />
               <h3>Solar Road Stud For Road Turning</h3>
-              <p>
-                <span>Size:138*34*50mm</span>
-                <span>Material:Anti-UV PC+Aluminum</span>
-              </p>
+              <p>Size:138*34*50mm</p>
+              <p>Material:Anti-UV PC+Aluminum</p>
             </li>
             <li className="li-item">
               <img src="/react-snap-example/imgHome/p4.jpg" alt="" />
               <h3>Solar Road Stud For Road Turning</h3>
-              <p>
-                <span>Size:138*34*50mm</span>
-                <span>Material:Anti-UV PC+Aluminum</span>
-              </p>
+              <p>Size:138*34*50mm</p>
+              <p>Material:Anti-UV PC+Aluminum</p>
             </li>
           </ul>
         </div>
         <div className="part-section part-3">
           <div className="content">
-            <h2 className="title">Contact Us</h2>
-            <ul className="ul-items f-jc-ac">
-              <li className="li-item f-jc-ac-dc">
-                <img src="/react-snap-example/imgHome/us_img1.png" alt="" />
-                <span>Sales Manager</span>
-                <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
-              </li>
-              <li className="li-item f-jc-ac-dc">
-                <img src="/react-snap-example/imgHome/us_img2.png" alt="" />
-                <span>Sales Manager</span>
-                <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
-              </li>
-              <li className="li-item f-jc-ac-dc">
-                <img src="/react-snap-example/imgHome/us_img3.png" alt="" />
-                <span>Sales Manager</span>
-                <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
-              </li>
-              <li className="li-item f-jc-ac-dc">
-                <img src="/react-snap-example/imgHome/us_img4.png" alt="" />
-                <span>Sales Manager</span>
-                <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
-              </li>
-            </ul>
+            <div className="content-c">
+              <h2 className="title">Contact Us</h2>
+              <ul className="ul-items f-jc-ac">
+                <li className="li-item f-jc-ac-dc">
+                  <img src="/react-snap-example/imgHome/us_img1.png" alt="" />
+                  <span>Sales Manager</span>
+                  <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
+                </li>
+                <li className="li-item f-jc-ac-dc">
+                  <img src="/react-snap-example/imgHome/us_img2.png" alt="" />
+                  <span>Sales Manager</span>
+                  <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
+                </li>
+                <li className="li-item f-jc-ac-dc">
+                  <img src="/react-snap-example/imgHome/us_img3.png" alt="" />
+                  <span>Sales Manager</span>
+                  <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
+                </li>
+                <li className="li-item f-jc-ac-dc">
+                  <img src="/react-snap-example/imgHome/us_img4.png" alt="" />
+                  <span>Sales Manager</span>
+                  <a href="mailto:solarroadstud@yeah.net">solarroadstud@yeah.net</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="part-section part-4">
           <div className="content">
-            <h2 className="title">Why Choose Us</h2>
-            <p className="p-text">We have more than 10 years construction and producr traffic signal)  ,Traffic Cone , Lane Divider, Convex Mirror, Road Line Marking Machine and Paint. Our competitive is professional and comprehensive with quality and price, you are warming welcome to cooperate with us.
-            </p>
-            <div className="f-jc-ac labels">
-              <span className="label-item">Over 20 tons compression resistance</span>
-              <span className="label-item">Can work in low/high temp,-20℃～+70℃.</span>
-              <span className="label-item">2 years Quality warranty</span>
-              <span className="label-item">Water ingress rating: IP68</span>
+            <div className="content-c">
+              <h2 className="title">Why Choose Us</h2>
+              <p className="p-text">We have more than 10 years construction and producr traffic signal)  ,Traffic Cone , Lane Divider, Convex Mirror, Road Line Marking Machine and Paint. Our competitive is professional and comprehensive with quality and price, you are warming welcome to cooperate with us.
+              </p>
+              <div className="f-jc-ac labels">
+                <span className="label-item">Over 20 tons compression resistance</span>
+                <span className="label-item">Can work in low/high temp,-20℃～+70℃.</span>
+                <span className="label-item">2 years Quality warranty</span>
+                <span className="label-item">Water ingress rating: IP68</span>
+              </div>
             </div>
           </div>
         </div>

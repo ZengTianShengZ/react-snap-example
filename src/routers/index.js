@@ -2,7 +2,7 @@ import React from 'react';
 import Loadable from 'react-loadable';
 
 const loadingComponent = () => (
-  <div></div>
+  <div className="loading-content"></div>
 );
 
 export default {
