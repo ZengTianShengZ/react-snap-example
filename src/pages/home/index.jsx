@@ -45,6 +45,9 @@ class SimpleSlider extends React.Component {
 
 class Home extends Component {
   state = {};
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <section className="app-home">

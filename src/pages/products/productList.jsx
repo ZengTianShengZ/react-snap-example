@@ -8,25 +8,6 @@ import { Link } from 'react-router-dom';
 import {getProducts} from 'src/API/index.js';
 import './product-list.less'
 
-const ProductItem = (props) => {
-  const {feature = {}, title, productId, productImgUrl} = props.item || {}
-  return (
-    <li className="li-item" onClick={props.itemClick.bind(null, productId)}>
-      <div className="li-item-content">
-        <img className="prod-img" src={productImgUrl} alt="Solar Road" />
-        <div className="products-detail">
-          <div className="title">{title}</div>
-          <div className="details f-js-as-dc">
-            <span>Size:{feature.size}</span>
-            <span>color:{feature.color}</span>
-            <span>Weight:{feature.weight}</span>
-          </div>
-        </div>
-      </div>
-    </li>
-  )
-}
-
 class ProductList extends Component {
   state = {
     resData: {
@@ -44,6 +25,7 @@ class ProductList extends Component {
     this.props.history.replace('/products/' + productId)
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.getData()
   }
   render() {
@@ -63,6 +45,25 @@ class ProductList extends Component {
       </section>
     )
   }
+}
+
+const ProductItem = (props) => {
+  const {feature = {}, title, productId, productImgUrl} = props.item || {}
+  return (
+    <li className="li-item" onClick={props.itemClick.bind(null, productId)}>
+      <div className="li-item-content">
+        <img className="prod-img" src={productImgUrl} alt="Solar Road" />
+        <div className="products-detail">
+          <div className="title">{title}</div>
+          <div className="details f-js-as-dc">
+            <span>Size:{feature.size}</span>
+            <span>color:{feature.color}</span>
+            <span>Weight:{feature.weight}</span>
+          </div>
+        </div>
+      </div>
+    </li>
+  )
 }
 
 export default ProductList

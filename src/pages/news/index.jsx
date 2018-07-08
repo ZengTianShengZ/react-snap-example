@@ -10,6 +10,9 @@ import './style.less';
 class News extends Component {
   state = {
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <section className="app-news">

@@ -9,6 +9,9 @@ import './style.less'
 class About extends Component {
   state = {
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <section className="app-about">

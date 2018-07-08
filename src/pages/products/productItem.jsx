@@ -72,6 +72,7 @@ class Products extends Component {
     }
   }
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.getData()
     // $('#etalage').etalage({
     //   thumb_image_width: 250,
