@@ -66,7 +66,8 @@ class Products extends Component {
     }
   }
   async getData() {
-    const res = await getProductItem('/issues/9')
+    const id = this.props.match.params.id
+    const res = await getProductItem(`/issues/${id}`)
     if (res.success) {
       this.setState({resData: res.data})
     }

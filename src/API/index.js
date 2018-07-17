@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 const req = axios.create({
-  baseURL: 'https://api.github.com/repos/ZengTianShengZ/react-snap-example/',
-  timeout: 3000
+  baseURL: 'https://api.github.com/repos/roadstudxp2/roadstudxp2.github.io/',
+  timeout: 3000,
+  headers: {'Authorization': 'Bearer b0853fc84a9d074b04de9fe6cb6c0cfa986e67ce'}
 });
 
 const jsonParse = (data) => (JSON.parse(data.replace(/\s+/g, '')))
@@ -47,7 +48,7 @@ const getData = async(url, parse = true) => {
   }
 }
 
-export const getProducts = async(url) => {
+export const getProducts = async(url = '/issues/5') => {
   const res = await getData(url)
   if (res.success) {
     let list = []

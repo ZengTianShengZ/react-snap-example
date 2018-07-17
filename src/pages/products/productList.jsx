@@ -15,14 +15,14 @@ class ProductList extends Component {
     }
   }
   async getData() {
-    const res = await getProducts('/issues/2')
+    const res = await getProducts()
     console.log(res);
     if (res.success) {
       this.setState({resData: res.data})
     }
   }
   onItemClick(productId) {
-    this.props.history.replace('/products/' + productId)
+    this.props.history.push('/products/' + productId)
   }
   componentDidMount() {
     window.scrollTo(0, 0)
